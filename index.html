@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malabar Outdoors — Mountaineering, Trekking, Cycling</title>
+<meta name="description" content="Mountaineering, trekking, cycling and outdoor explorations — from the Western Ghats of India to the Alps and the Himalaya. Expedition reports by Deovrat Phal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ghat:#22382B;        /* monsoon canopy green */
+  --ghat-deep:#16261D;
+  --glacier:#EFF2ED;     /* cool green-tinted off-white */
+  --card:#FFFFFF;
+  --laterite:#A6412A;    /* Malabar laterite stone */
+  --ink:#1A211D;
+  --slate:#54615A;
+  --hairline:#CBD4CC;
+  --display:'Archivo',sans-serif;
+  --body:'Newsreader',Georgia,serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:var(--body);
+  background:var(--glacier);
+  color:var(--ink);
+  font-size:1.0625rem;
+  line-height:1.65;
+}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--laterite);outline-offset:3px;border-radius:2px}
+img{display:block;max-width:100%}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:var(--ghat-deep);
+  color:var(--glacier);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.5rem;
+}
+.wordmark{
+  font-family:var(--display);
+  font-weight:800;
+  font-stretch:80%;
+  font-size:1.25rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  text-decoration:none;
+  display:flex;align-items:baseline;gap:.6rem;
+}
+.wordmark .sea{
+  font-family:var(--mono);font-size:.65rem;font-weight:400;
+  letter-spacing:.05em;color:#9DB5A4;
+}
+nav{display:flex;gap:1.75rem}
+nav a{
+  font-family:var(--display);font-weight:500;font-size:.8rem;
+  letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+  color:#C6D4C8;padding:.25rem 0;border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+nav a:hover{color:#fff;border-bottom-color:var(--laterite)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  background:var(--ghat);
+  color:var(--glacier);
+  overflow:hidden;
+}
+.hero-photo{
+  position:absolute;inset:0;
+  background-image:url('https://malabaroutdoors.wordpress.com/wp-content/uploads/2021/12/img_20201022_084226.jpg?w=1920');
+  background-size:cover;background-position:center 40%;
+  opacity:.38;
+}
+.hero-tint{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(22,38,29,.55) 0%,rgba(22,38,29,.25) 45%,rgba(22,38,29,.9) 100%);
+}
+.contours{position:absolute;inset:0;opacity:.5;mix-blend-mode:soft-light;pointer-events:none}
+.hero-inner{
+  position:relative;
+  max-width:1200px;margin:0 auto;
+  padding:7rem 1.5rem 5.5rem;
+}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.28em;
+  text-transform:uppercase;color:#B9CFBE;
+  display:flex;align-items:center;gap:.9rem;margin-bottom:1.6rem;
+}
+.hero-eyebrow::before{content:"";width:2.6rem;height:1px;background:var(--laterite)}
+h1{
+  font-family:var(--display);
+  font-weight:900;
+  font-stretch:72%;
+  text-transform:uppercase;
+  font-size:clamp(2.6rem,7.5vw,5.4rem);
+  line-height:.95;
+  letter-spacing:.01em;
+  max-width:14ch;
+}
+h1 em{font-style:normal;color:#E8A88F}
+.hero-sub{
+  margin-top:1.75rem;max-width:52ch;
+  font-size:1.15rem;line-height:1.6;color:#D8E2D8;
+}
+.hero-range{
+  margin-top:3rem;
+  display:flex;flex-wrap:wrap;gap:2.5rem;
+  font-family:var(--mono);
+}
+.range-item{border-left:2px solid rgba(232,168,143,.5);padding-left:1rem}
+.range-item .alt{font-size:1.35rem;font-weight:500;letter-spacing:.02em}
+.range-item .where{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#A9C0AE;margin-top:.2rem}
+
+/* ---------- ledger ---------- */
+.ledger{
+  max-width:1200px;margin:0 auto;
+  padding:4.5rem 1.5rem 4rem;
+}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:1rem;flex-wrap:wrap;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:.85rem;margin-bottom:0;
+}
+.section-head h2{
+  font-family:var(--display);font-weight:800;font-stretch:75%;
+  text-transform:uppercase;font-size:1.7rem;letter-spacing:.03em;
+}
+.section-head .count{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--slate);
+}
+.entry{
+  display:grid;
+  grid-template-columns:9.5rem 1fr 15rem;
+  gap:2rem;
+  align-items:center;
+  padding:2.1rem 0;
+  border-bottom:1px solid var(--hairline);
+  text-decoration:none;
+}
+.entry:hover .entry-title{color:var(--laterite)}
+.entry:hover .thumb img{transform:scale(1.04)}
+.alt-block{align-self:start;padding-top:.3rem}
+.alt-block .alt{
+  font-family:var(--mono);font-weight:500;
+  font-size:1.6rem;letter-spacing:-.01em;color:var(--ghat);
+}
+.alt-block .alt small{font-size:.85rem;color:var(--slate)}
+.alt-block .place{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin-top:.35rem;line-height:1.5;
+}
+.entry-main .meta{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--laterite);margin-bottom:.5rem;
+}
+.entry-title{
+  font-family:var(--display);font-weight:700;font-stretch:82%;
+  font-size:1.45rem;line-height:1.15;letter-spacing:.005em;
+  transition:color .2s;
+}
+.entry-main p{
+  margin-top:.6rem;color:var(--slate);font-size:1rem;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.thumb{overflow:hidden;border-radius:3px;aspect-ratio:4/3;background:var(--hairline)}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+
+/* ---------- about strip ---------- */
+.about{
+  background:var(--ghat);color:var(--glacier);
+  position:relative;overflow:hidden;
+}
+.about .contours{opacity:.35}
+.about-inner{
+  position:relative;
+  max-width:1200px;margin:0 auto;
+  padding:4rem 1.5rem;
+  display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;
+}
+.about-mark{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;
+  text-transform:uppercase;color:#B9CFBE;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  border-right:2px solid var(--laterite);padding-right:1rem;
+}
+.about-inner p{
+  font-size:1.3rem;line-height:1.6;max-width:58ch;
+  font-weight:400;
+}
+.about-inner p b{color:#E8A88F;font-weight:600}
+
+/* ---------- subscribe / footer ---------- */
+.follow{
+  max-width:1200px;margin:0 auto;
+  padding:4.5rem 1.5rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+}
+.follow h2{
+  font-family:var(--display);font-weight:800;font-stretch:75%;
+  text-transform:uppercase;font-size:1.7rem;
+}
+.follow .lede{margin-top:.75rem;color:var(--slate)}
+.socials{display:flex;flex-direction:column;gap:0;border-top:2px solid var(--ink)}
+.socials a{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.05rem .25rem;
+  border-bottom:1px solid var(--hairline);
+  text-decoration:none;
+  font-family:var(--display);font-weight:600;font-stretch:85%;
+  letter-spacing:.06em;font-size:1.05rem;
+  transition:color .2s,padding-left .2s;
+}
+.socials a:hover{color:var(--laterite);padding-left:.7rem}
+.socials a span{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);
+}
+footer{
+  background:var(--ghat-deep);color:#9DB5A4;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  padding:1.6rem 1.5rem;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .entry{grid-template-columns:1fr;gap:1rem}
+  .thumb{order:-1;aspect-ratio:16/9}
+  .alt-block{display:flex;gap:1rem;align-items:baseline}
+  .alt-block .place{margin-top:0}
+  .follow{grid-template-columns:1fr;gap:2rem}
+  .about-inner{grid-template-columns:1fr;gap:1.5rem}
+  .about-mark{writing-mode:horizontal-tb;transform:none;border-right:0;border-bottom:2px solid var(--laterite);padding:0 0 .6rem}
+  nav{gap:1.1rem}
+  .hero-inner{padding:5rem 1.5rem 4rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="wordmark" href="/">Malabar Outdoors <span class="sea">EST. SEA LEVEL</span></a>
+    <nav aria-label="Main">
+      <a href="/">Home</a>
+      <a href="#log">Expedition log</a>
+      <a href="#follow">Follow</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-photo" role="img" aria-label="Ridge line in the mountains at dawn"></div>
+  <div class="hero-tint"></div>
+  <svg class="contours" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#EFF2ED" stroke-width="1.1">
+      <path d="M-50,620 C200,560 340,640 560,590 S900,480 1120,540 1490,600 1490,600"/>
+      <path d="M-50,540 C180,480 380,560 580,500 S880,390 1130,450 1490,510 1490,510"/>
+      <path d="M-50,460 C220,410 400,470 600,420 S860,310 1140,370 1490,430 1490,430"/>
+      <path d="M-50,380 C240,330 420,390 620,340 S850,240 1150,290 1490,350 1490,350"/>
+      <path d="M-50,300 C260,260 440,300 640,260 S840,170 1160,215 1490,270 1490,270"/>
+      <path d="M-50,220 C280,190 460,220 660,185 S830,110 1170,145 1490,195 1490,195"/>
+      <path d="M-50,140 C300,120 480,140 680,115 S820,60 1180,80 1490,120 1490,120"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Western Ghats · Himalaya · The Alps</p>
+    <h1>Mountaineering, trekking, cycling &amp; the <em>outdoors</em></h1>
+    <p class="hero-sub">Expedition reports and outdoor explorations, written as they happen — raw, unscripted, and in their most unexpected beauty. From the monsoon forests of the Malabar coast to six-thousand-metre summits.</p>
+    <div class="hero-range">
+      <div class="range-item"><div class="alt">6,010 m</div><div class="where">Matho Kangri · Ladakh</div></div>
+      <div class="range-item"><div class="alt">4,563 m</div><div class="where">Monte Rosa · Alps</div></div>
+      <div class="range-item"><div class="alt">604 m</div><div class="where">Preikestolen · Norway</div></div>
+    </div>
+  </div>
+</section>
+
+<main class="ledger" id="log">
+  <div class="section-head">
+    <h2>Expedition log</h2>
+    <span class="count">Entries · newest first</span>
+  </div>
+
+  <a class="entry" href="posts/matho-kangri-6000m-alpine-style.html">
+    <div class="alt-block">
+      <div class="alt">6,010<small> m</small></div>
+      <div class="place">Zanskar Range · Ladakh, India</div>
+    </div>
+    <div class="entry-main">
+      <p class="meta">July 2025 · Mountaineering</p>
+      <h3 class="entry-title">Matho Kangri 6000 m peak expedition, alpine style</h3>
+      <p>A private, self-supported push on a remote rocky six-thousander near Leh — chalked out with two of Darjeeling's finest Himalayan mountaineers, and compressed into far fewer days than the mountain usually demands.</p>
+    </div>
+    <div class="thumb"><img src="https://malabaroutdoors.wordpress.com/wp-content/uploads/2025/07/img-20250715-wa00201024.jpg?w=800" alt="Climber on the rocky slopes of Matho Kangri" loading="lazy"></div>
+  </a>
+
+  <a class="entry" href="posts/alps-4000m-peak-bagging.html">
+    <div class="alt-block">
+      <div class="alt">4,563<small> m</small></div>
+      <div class="place">Gran Paradiso &amp; Monte Rosa · Alps</div>
+    </div>
+    <div class="entry-main">
+      <p class="meta">Summer 2022 · Mountaineering</p>
+      <h3 class="entry-title">From the Western Ghats of India to the European Alps — 4000 m peak-bagging</h3>
+      <p>An alpine summer spent on Gran Paradiso and across the Monte Rosa massif — Parrotspitze, Zumsteinspitze, Signalkuppe, Balmenhorn — on the border where Switzerland leans into Italy.</p>
+    </div>
+    <div class="thumb"><img src="https://malabaroutdoors.wordpress.com/wp-content/uploads/2023/04/mb1.jpg?w=800" alt="Roped climbers on a snow ridge in the Monte Rosa massif" loading="lazy"></div>
+  </a>
+
+  <a class="entry" href="posts/mumbai-climate-action-cycling.html">
+    <div class="alt-block">
+      <div class="alt">14<small> m</small></div>
+      <div class="place">Mumbai · India</div>
+    </div>
+    <div class="entry-main">
+      <p class="meta">June 2022 · Cycling</p>
+      <h3 class="entry-title">Mumbai Climate Action Plan: does it promise better cycling infrastructure?</h3>
+      <p>The city's first-ever climate action plan aims for net-zero by 2050. Read as a proud cycle-owner: will Mumbai pioneer safe, climate-friendly streets, or is the fine print thinner than the headline?</p>
+    </div>
+    <div class="thumb"><img src="https://malabaroutdoors.wordpress.com/wp-content/uploads/2022/04/img_20200822_184640.jpg?w=800" alt="Cyclist on a Mumbai street" loading="lazy"></div>
+  </a>
+
+  <a class="entry" href="posts/sherpa-stairs-norway.html">
+    <div class="alt-block">
+      <div class="alt">604<small> m</small></div>
+      <div class="place">Preikestolen · Lysefjord, Norway</div>
+    </div>
+    <div class="entry-main">
+      <p class="meta">April 2022 · Trekking</p>
+      <h3 class="entry-title">A Nepalese touch to the Norwegian trails</h3>
+      <p>Norway's fjord country is a hiker's paradise — and on the iconic path to Preikestolen, the stone steps underfoot were laid by Sherpa stone-masons from Nepal. Two mountain cultures, one staircase.</p>
+    </div>
+    <div class="thumb"><img src="https://malabaroutdoors.wordpress.com/wp-content/uploads/2022/04/1title.jpg?w=800" alt="Stone steps on a Norwegian trail above a fjord" loading="lazy"></div>
+  </a>
+
+  <a class="entry" href="posts/mumbai-goa-cycling.html">
+    <div class="alt-block">
+      <div class="alt">620<small> km</small></div>
+      <div class="place">Konkan Coast · Mumbai → Goa</div>
+    </div>
+    <div class="entry-main">
+      <p class="meta">December 2021 · Cycling</p>
+      <h3 class="entry-title">Mumbai to Goa cycling: 4 lessons from our 4-day pilgrimage on wheels</h3>
+      <p>620 kilometres down the Konkan coastal highway on a road bike — barge crossings, cashless villages, an empty airport, and a homecoming disguised as an endurance ride.</p>
+    </div>
+    <div class="thumb"><img src="https://malabaroutdoors.wordpress.com/wp-content/uploads/2021/12/boati.jpg?w=800" alt="Cycles loaded on a barge crossing on the Konkan coast" loading="lazy"></div>
+  </a>
+</main>
+
+<section class="about">
+  <svg class="contours" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#EFF2ED" stroke-width="1">
+      <path d="M-50,320 C260,270 460,330 700,280 S980,190 1490,250"/>
+      <path d="M-50,230 C280,190 480,240 720,195 S970,110 1490,165"/>
+      <path d="M-50,140 C300,110 500,150 740,110 S960,40 1490,85"/>
+    </g>
+  </svg>
+  <div class="about-inner">
+    <div class="about-mark">Field notes</div>
+    <p>Organically crafted content, focused on capturing life as it happens — <b>raw, unscripted, unexpected</b>. Every entry here was walked, climbed, or pedalled before it was written.</p>
+  </div>
+</section>
+
+<section class="follow" id="follow">
+  <div>
+    <h2>Follow the trail</h2>
+    <p class="lede">New expedition reports land here first. For everything in between — summit photos, route scouting, gear on the workbench — the field channels below are live year-round.</p>
+  </div>
+  <div class="socials">
+    <a href="https://www.instagram.com/deovratphal/">Instagram <span>@deovratphal</span></a>
+    <a href="https://www.youtube.com/c/DeovratPhalRoboticRaptor/featured">YouTube <span>Deovrat Phal</span></a>
+    <a href="https://www.linkedin.com/in/deovratphal/">LinkedIn <span>deovratphal</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Malabar Outdoors</span>
+    <span>Sea level → 6,010 m and counting</span>
+  </div>
+</footer>
+
+</body>
+</html>
