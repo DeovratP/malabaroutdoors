@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malabar Outdoors</title>
-<meta name="description" content="Mountaineering, trekking, cycling and outdoor explorations from the Western Ghats of India to the Alps and the Himalaya. Expedition reports by Deovrat Phal.">
+<meta name="description" content="Mountaineering, trekking, cycling and outdoor explorations, from the Western Ghats of India to the Alps and the Himalaya. Expedition reports by Deovrat Phal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -73,6 +73,14 @@ nav a{
   transition:color .2s,border-color .2s;
 }
 nav a:hover{color:#fff;border-bottom-color:var(--laterite)}
+nav a{white-space:nowrap}
+@media (max-width:700px){
+  .header-inner{flex-wrap:wrap;padding:.7rem 1rem .55rem;row-gap:.3rem}
+  .wordmark{font-size:1rem;white-space:nowrap}
+  .wordmark .sea{display:none}
+  nav{width:100%;gap:1.5rem}
+  nav a{font-size:.7rem;letter-spacing:.14em;padding:.15rem 0}
+}
 
 /* ---------- hero ---------- */
 .hero{
@@ -281,7 +289,7 @@ footer{
   <div class="hero-inner">
     <p class="hero-eyebrow">Western Ghats · Himalaya · The Alps</p>
     <h1>Mountaineering, trekking, cycling &amp; the <em>outdoors</em></h1>
-    <p class="hero-sub">Expedition reports and outdoor explorations, written as they happen — raw, unscripted, and in their most unexpected beauty. From the monsoon forests of the Malabar coast to six-thousand-metre summits.</p>
+    <p class="hero-sub">Expedition reports and outdoor explorations, written as they happen - raw, unscripted, and in their most unexpected beauty. From the monsoon forests of the Malabar coast to six-thousand-metre summits.</p>
     <div class="hero-range">
       <div class="range-item"><div class="alt">6,010 m</div><div class="where">Matho Kangri · Ladakh</div></div>
       <div class="range-item"><div class="alt">4,563 m</div><div class="where">Monte Rosa · Alps</div></div>
@@ -304,7 +312,7 @@ footer{
     <div class="entry-main">
       <p class="meta">July 2025 · Mountaineering</p>
       <h3 class="entry-title">Matho Kangri 6000 m peak expedition, alpine style</h3>
-      <p>A private, self-supported push on a remote rocky six-thousander near Leh — chalked out with two of Darjeeling's finest Himalayan mountaineers, and compressed into far fewer days than the mountain usually demands.</p>
+      <p>A private, self-supported push on a remote rocky six-thousander near Leh, chalked out with two of Darjeeling's finest Himalayan mountaineers, and compressed into far fewer days than the mountain usually demands.</p>
     </div>
     <div class="thumb"><img src="images/img-20250715-wa00201024.jpg" alt="Climber on the rocky slopes of Matho Kangri" loading="lazy"></div>
   </a>
@@ -316,8 +324,8 @@ footer{
     </div>
     <div class="entry-main">
       <p class="meta">Summer 2022 · Mountaineering</p>
-      <h3 class="entry-title">From the Western Ghats of India to the European Alps — 4000 m peak-bagging</h3>
-      <p>An alpine summer spent on Gran Paradiso and across the Monte Rosa massif — Parrotspitze, Zumsteinspitze, Signalkuppe, Balmenhorn — on the border where Switzerland leans into Italy.</p>
+      <h3 class="entry-title">From the Western Ghats of India to the European Alps - 4000 m peak-bagging</h3>
+      <p>An alpine summer spent on Gran Paradiso and across the Monte Rosa massif - Parrotspitze, Zumsteinspitze, Signalkuppe, Balmenhorn - on the border where Switzerland leans into Italy.</p>
     </div>
     <div class="thumb"><img src="images/mb1.jpg" alt="Roped climbers on a snow ridge in the Monte Rosa massif" loading="lazy"></div>
   </a>
@@ -343,7 +351,7 @@ footer{
     <div class="entry-main">
       <p class="meta">April 2022 · Trekking</p>
       <h3 class="entry-title">A Nepalese touch to the Norwegian trails</h3>
-      <p>Norway's fjord country is a hiker's paradise — and on the iconic path to Preikestolen, the stone steps underfoot were laid by Sherpa stone-masons from Nepal. Two mountain cultures, one staircase.</p>
+      <p>Norway's fjord country is a hiker's paradise and on the iconic path to Preikestolen, the stone steps underfoot were laid by Sherpa stone-masons from Nepal. Two mountain cultures, one staircase.</p>
     </div>
     <div class="thumb"><img src="images/1title.jpg" alt="Stone steps on a Norwegian trail above a fjord" loading="lazy"></div>
   </a>
@@ -356,7 +364,7 @@ footer{
     <div class="entry-main">
       <p class="meta">December 2021 · Cycling</p>
       <h3 class="entry-title">Mumbai to Goa cycling: 4 lessons from our 4-day pilgrimage on wheels</h3>
-      <p>620 kilometres down the Konkan coastal highway on a road bike — barge crossings, cashless villages, an empty airport, and a homecoming disguised as an endurance ride.</p>
+      <p>620 kilometres down the Konkan coastal highway on a road bike - barge crossings, cashless villages, an empty airport, and a homecoming disguised as an endurance ride.</p>
     </div>
     <div class="thumb"><img src="images/boati.jpg" alt="Cycles loaded on a barge crossing on the Konkan coast" loading="lazy"></div>
   </a>
@@ -372,30 +380,30 @@ footer{
   </svg>
   <div class="about-inner">
     <div class="about-mark">Field notes</div>
-    <p>Organically crafted content, focused on capturing life as it happens — <b>raw, unscripted, unexpected</b>. Every entry here was walked, climbed, or pedalled before it was written.</p>
+    <p>Organically crafted content, focused on capturing life as it happens - <b>raw, unscripted, unexpected</b>. Every entry here was walked, climbed, or pedalled before it was written.</p>
   </div>
 </section>
 
 <section class="follow" id="follow">
   <div>
     <h2>Follow the trail</h2>
-    <p class="lede">New expedition reports land here first. For everything in between — summit photos, route scouting, gear on the workbench — the field channels below are live year-round.</p>
+    <p class="lede">New expedition reports land here first. For everything in between - summit photos, route scouting, gear on the workbench - the social media channels below are live year-round.</p>
   </div>
   <div class="socials">
-    <a href="https://www.instagram.com/deovratphal/" aria-label="Instagram — @deovratphal" title="Instagram">
+    <a href="https://www.instagram.com/deovratphal/" aria-label="Instagram - @deovratphal" title="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/>
         <circle cx="12" cy="12" r="4.4"/>
         <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor" stroke="none"/>
       </svg>
     </a>
-    <a href="https://www.youtube.com/c/DeovratPhalRoboticRaptor/featured" aria-label="YouTube — Deovrat Phal" title="YouTube">
+    <a href="https://www.youtube.com/c/DeovratPhalRoboticRaptor/featured" aria-label="YouTube - Deovrat Phal" title="YouTube">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <rect x="2" y="5" width="20" height="14" rx="4"/>
         <path d="M10.2 9.3 L15.2 12 L10.2 14.7 Z" fill="currentColor" stroke="none"/>
       </svg>
     </a>
-    <a href="https://www.linkedin.com/in/deovratphal/" aria-label="LinkedIn — deovratphal" title="LinkedIn">
+    <a href="https://www.linkedin.com/in/deovratphal/" aria-label="LinkedIn - deovratphal" title="LinkedIn">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <circle cx="6.4" cy="6.6" r="2"/>
         <rect x="4.8" y="10.2" width="3.2" height="9.3" rx=".4"/>

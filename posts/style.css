@@ -50,6 +50,14 @@ nav a{
   transition:color .2s,border-color .2s;
 }
 nav a:hover{color:#fff;border-bottom-color:var(--laterite)}
+nav a{white-space:nowrap}
+@media (max-width:700px){
+  .header-inner{flex-wrap:wrap;padding:.7rem 1rem .55rem;row-gap:.3rem}
+  .wordmark{font-size:1rem;white-space:nowrap}
+  .wordmark .sea{display:none}
+  nav{width:100%;gap:1.5rem}
+  nav a{font-size:.7rem;letter-spacing:.14em;padding:.15rem 0}
+}
 
 .post-head{
   background:var(--ghat);color:var(--glacier);
