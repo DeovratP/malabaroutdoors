@@ -86,7 +86,12 @@ article h2 .tick{color:var(--laterite)}
 article strong{font-weight:600}
 article a{color:var(--laterite);text-decoration-thickness:1px;text-underline-offset:3px}
 figure{margin:2.2rem 0}
-figure img{width:100%;border-radius:3px}
+figure img{
+  width:100%;height:auto;border-radius:3px;
+  background:#DCE2DB;        /* grey box visible until the photo arrives */
+  aspect-ratio:auto 3/2;     /* reserve ~photo-shaped space before load;
+                                natural shape takes over once loaded */
+}
 figcaption{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--slate);margin-top:.6rem;
